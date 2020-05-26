@@ -1,0 +1,25 @@
+.form {
+  margin: 30px auto;
+  text-align: center;
+  width: 50%;
+}
+
+.intro, .error {
+  margin: 20px 0;
+}
+
+.intro {
+  font-size: 28px;
+  font-weight: 600;  
+}
+
+input {
+  font-size: 10px;
+  vertical-align: baseline;
+  
+}
+
+.error {
+  font-size: 22px;
+  color: red;
+}
