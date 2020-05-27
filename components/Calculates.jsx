@@ -1,34 +1,17 @@
 import React, { useState } from 'react'
 
 export default () => {
-  const [number, setNumber] = useState('')
+  const [numberOne, setNumberOne] = useState('')
 
-  const firstNumber = (event) => {
-    setNumber(event.target.value)
-  }
-
-  const secondNumber = (event) => {
-    setNumber(event.target.value)
-  }
-
-  const equalsNumber = () => {
-    setNumber('')
-  }
-
-  const result = (event) => {
-    result(event.target.value)
-  }
-
-  const operator = () => {
-    setNumber('')
-  }
+  const [numberTwo, setNumberTwo] = useState('')
+  const [setOperators] = useState('')
+  const [result, getResult] = useState('')
 
   return (
     <div className="form">
       <div className="intro">React Calculator</div>
-      <input type="text" id="search" onChange={firstNumber} value={number} />
-      <div className="num1">{number}</div>
-      <button type="button" onClick={operator}>
+      <input type="text" id="numberOne" onChange={event => setNumberOne(event.target.value)} value={numberOne} />
+      <button type="button" id="operators" onClick={() => { setOperators('') }}>
         <select id="operators">
           <option value="+">+</option>
           <option value="-">-</option>
@@ -36,12 +19,12 @@ export default () => {
           <option value="/">/</option>
         </select>
       </button>
-      <input type="text" id="search" onChange={secondNumber} value={number} />
-      <div className="num2">{number}</div>
-      <button type="button" onClick={equalsNumber}>=</button>
-      <input type="text" id="search" onChange={result} value={number} />
-      <div className="result">{number}</div>
-      <div className="error">Please provide a valid number for both operands</div>
+      <input type="text" id="numberTwo" onChange={event => setNumberTwo(event.target.value)} value={numberTwo} />
+      <button type="button" onClick={() => { getResult('') }}>=</button>
+      <input type="text" id="result" onChange={event => getResult(event.target.value)} value={result} />
+      <div className="error">
+        { numberOne || numberTwo ? { numberOne, numberTwo } : 'Please provide a valid number for both operands'}
+      </div>
 
 
     </div>
