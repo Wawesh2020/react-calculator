@@ -1,0 +1,41 @@
+.form {
+  margin: 30px auto;
+  text-align: center;
+  width: 50%;
+}
+
+.intro, .error {
+  margin: 20px 0;
+}
+
+.intro {
+  font-size: 28px;
+  font-weight: 600;  
+}
+
+input {
+  width: 10;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transform: 0.3s;
+}
+
+.button {
+  width: 10;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transform: 0.3s;
+}
+
+.error {
+  font-size: 22px;
+  color: red;
+}
